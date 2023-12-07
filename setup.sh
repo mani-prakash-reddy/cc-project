@@ -8,9 +8,20 @@ sudo apt-get update
 echo "Installing PostgreSQL and pgAdmin..."
 sudo apt-get -y install postgresql postgresql-contrib pgadmin4
 
-# Create a new PostgreSQL database named "predico"
-echo "Creating a new PostgreSQL database..."
-sudo -u postgres createdb predico
+# Create a new PostgreSQL user
+echo "Creating a new PostgreSQL user..."
+sudo -u postgres createuser postgres
+
+# Set password for the new PostgreSQL user
+echo "Setting password for the new PostgreSQL user..."
+sudo -u postgres psql -c "ALTER USER postgres WITH PASSWORD '1234';"
+
+# Grant all privileges of the database to the new user
+echo "Granting all privileges of the database to the new user..."
+sudo -u postgres psql -c "GRANT ALL PRIVILEGES ON DATABASE predico TO postgres;"
+
+# Check if PostgreSQL is running
+pgrep postgres > /dev/null && echo "PostgreSQL is already running" || sudo service postgresql start
 
 # Install python3 and pip
 echo "Installing python3 and pip..."
