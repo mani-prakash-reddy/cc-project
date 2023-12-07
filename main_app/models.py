@@ -57,19 +57,18 @@ class doctor(models.Model):
     rating = models.IntegerField(default=0)
 
 
+class Symptom(models.Model):
+    name = models.CharField(max_length=200)
 
 
+class DiseaseInfo(models.Model):
+    patient = models.ForeignKey(patient, null=True, on_delete=models.SET_NULL)
 
-class diseaseinfo(models.Model):
-
-    patient = models.ForeignKey(patient , null=True, on_delete=models.SET_NULL)
-
-    diseasename = models.CharField(max_length = 200)
+    diseasename = models.CharField(max_length=200)
     no_of_symp = models.IntegerField()
-    symptomsname = ArrayField(models.CharField(max_length=200))
+    symptoms = models.ManyToManyField(Symptom)
     confidence = models.DecimalField(max_digits=5, decimal_places=2)
-    consultdoctor = models.CharField(max_length = 200)
-
+    consultdoctor = models.CharField(max_length=200)
 
 
 class consultation(models.Model):

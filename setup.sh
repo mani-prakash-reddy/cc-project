@@ -21,7 +21,7 @@ echo "Granting all privileges of the database to the new user..."
 sudo -u postgres psql -c "GRANT ALL PRIVILEGES ON DATABASE predico TO postgres;"
 
 # Check if PostgreSQL is running
-pgrep postgres > /dev/null && echo "PostgreSQL is already running" || sudo service postgresql start
+pgrep postgres > /dev/null && echo "PostgreSQL is already running" || sudo service postgresql start && echo "PostgreSQL is now running"
 
 # Install python3 and pip
 echo "Installing python3 and pip..."
