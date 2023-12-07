@@ -1,23 +1,30 @@
 #!/bin/bash
 
 # Update system packages
+echo "Updating system packages..."
 sudo apt-get update
 
 # Install PostgreSQL and pgAdmin
-sudo apt-get install postgresql postgresql-contrib pgadmin4
+echo "Installing PostgreSQL and pgAdmin..."
+sudo apt-get -y install postgresql postgresql-contrib pgadmin4
 
 # Create a new PostgreSQL database named "predico"
+echo "Creating a new PostgreSQL database..."
 sudo -u postgres createdb predico
 
-# Install Python and pip
-sudo apt-get install python3.10 python3-pip
+# Install python3 and pip
+echo "Installing python3 and pip..."
+sudo apt-get -y install python3.10 python3-pip
 
 # Install the project requirements
+echo "Installing project requirements..."
 pip install -r requirements.txt
 
 # Run Django migrations
-python manage.py makemigrations
-python manage.py migrate
+echo "Running Django migrations..."
+python3 manage.py makemigrations
+python3 manage.py migrate
 
 # Start the Django server
-python manage.py runserver
+echo "Starting the Django server..."
+python3 manage.py runserver
