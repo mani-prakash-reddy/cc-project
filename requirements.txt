@@ -1,5 +1,5 @@
   
-django
+Django
 joblib
 scikit-learn
 psycopg2-binary
