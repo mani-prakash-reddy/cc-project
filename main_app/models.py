@@ -61,7 +61,7 @@ class Symptom(models.Model):
     name = models.CharField(max_length=200)
 
 
-class DiseaseInfo(models.Model):
+class diseaseinfo(models.Model):
     patient = models.ForeignKey(patient, null=True, on_delete=models.SET_NULL)
 
     diseasename = models.CharField(max_length=200)
