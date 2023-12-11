@@ -18,7 +18,7 @@ sudo -u postgres psql -c "ALTER USER postgres WITH PASSWORD '1234';"
 
 # Grant all privileges of the database to the new user
 echo "Granting all privileges of the database to the new user..."
-sudo -u postgres psql -c "GRANT ALL PRIVILEGES ON DATABASE predico TO postgres;"
+sudo -u postgres psql -c "GRANT ALL PRIVILEGES ON DATABASE Amrita Multi Speciality Hospital TO postgres;"
 
 # Check if PostgreSQL is running
 pgrep postgres > /dev/null && echo "PostgreSQL is already running" || sudo service postgresql start && echo "PostgreSQL is now running"
