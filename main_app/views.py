@@ -363,7 +363,7 @@ def  consult_a_doctor(request):
         doctortype = request.session['doctortype']
         print(doctortype)
         dobj = doctor.objects.all()
-        #dobj = doctor.objects.filter(specialization=doctortype)
+        dobj = doctor.objects.filter(specialization=doctortype)
 
 
         return render(request,'patient/consult_a_doctor/consult_a_doctor.html',{"dobj":dobj})
