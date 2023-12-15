@@ -87,7 +87,7 @@ DATABASES = {
         'NAME': 'postgres',
         'USER': 'postgres',
         'PASSWORD': 'postgres',
-        'HOST': 'database-2.ceeio9legl7c.us-east-1.rds.amazonaws.com'
+        'HOST': 'database-1.ceeio9legl7c.us-east-1.rds.amazonaws.com'
     }
 }
 
