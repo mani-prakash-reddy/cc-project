@@ -137,24 +137,32 @@ padding: 10px 10px 10px 10px;
   }*/
   
   /* Change color of dropdown links on hover */
-  .dropdown-content a:hover {background-color: rgb(90, 181, 241);
+  .dropdown-content a:hover {
+    background-color: rgba(90, 181, 241, 0.5); /* Semi-transparent background */
+    box-shadow: 0px 8px 16px 0px rgba(3, 169, 244, 0.2); /* Add some shadow */
+    border-radius: 10px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition */
   }
 
-  
-  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container
-   when the user clicks on the dropdown button) */
-  .show {display:inline-block;}
-
+  .show {
+    display:inline-block;
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent background */
+    box-shadow: 0px 8px 16px 0px rgba(3, 169, 244, 0.2); /* Add some shadow */
+    border-radius: 10px; /* Rounded corners */
+  }
 
   #searchbar{ 
     margin-left: 25%; 
     padding:10px; 
     border-radius: 10px; 
-   
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent background */
+    box-shadow: 0px 8px 16px 0px rgba(3, 169, 244, 0.2); /* Add some shadow */
     width: 30%; 
-} 
+  } 
 
   #searchbardiv{
     padding:10px; 
-
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent background */
+    box-shadow: 0px 8px 16px 0px rgba(3, 169, 244, 0.2); /* Add some shadow */
+    border-radius: 10px; /* Rounded corners */
   }
