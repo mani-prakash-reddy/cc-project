@@ -21,9 +21,9 @@ model = jb.load('trained_model')
 
 def predict(task_name, image_path):
     api = {
-        "kidney": "http://127.0.0.1:8080/predict",
-        "brain": "http://127.0.0.1:8080/predict",
-        "skin": "http://127.0.0.1:8080/predict"
+        "kidney": "http://3.91.88.19/predict",
+        "brain": "http://18.215.186.28/predict",
+        "skin": "http://18.207.139.160/predict"
     }[task_name]
 
     files = {'file': ('1', open(image_path, 'rb'))}
